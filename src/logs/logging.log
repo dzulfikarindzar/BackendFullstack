@@ -1,0 +1,17 @@
+[2020-12-19T17:32:37.248Z] info Service running on port 9100
+[2020-12-19T17:32:37.283Z] info Connection to redis OK
+[2020-12-19T17:32:37.543Z] info Database Connect
+[2020-12-19T17:32:47.125Z] warn Error token invalid token
+[2020-12-19T17:35:17.715Z] warn Error token invalid token
+[2020-12-19T17:35:39.466Z] info Service running on port 9100
+[2020-12-19T17:35:39.491Z] info Connection to redis OK
+[2020-12-19T17:35:39.671Z] info Database Connect
+[2020-12-19T17:35:45.743Z] info Service running on port 9100
+[2020-12-19T17:35:45.773Z] info Connection to redis OK
+[2020-12-19T17:35:46.057Z] info Database Connect
+[2020-12-19T17:35:50.138Z] info Service running on port 9100
+[2020-12-19T17:35:50.169Z] info Connection to redis OK
+[2020-12-19T17:35:50.432Z] info Database Connect
+[2020-12-19T17:35:51.991Z] info Service running on port 9100
+[2020-12-19T17:35:52.039Z] info Connection to redis OK
+[2020-12-19T17:35:52.279Z] info Database Connect

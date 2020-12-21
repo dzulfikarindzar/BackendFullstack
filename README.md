@@ -1,4 +1,4 @@
-# Backend Beginner with RESTful API
+# Backend Intermediate with RESTful API
 
 This is my first Backend Beginner with Restful API using **ExpressJS**
 ## This project RESTful API use:

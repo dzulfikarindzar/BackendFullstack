@@ -1,113 +1,130 @@
-const db = require('../Config/db')
-const products = {}
+const db = require('../Config/db');
+const product = {};
 
 
-products.getAll= () => {
+product.getAll= () => {
     return new Promise((resolve, reject) => {
-      db.query(
-        "SELECT product.id, product.name,  product.image, product.price, category.name AS category FROM public.product LEFT JOIN public.category ON category.id = product.id_category ORDER BY product.id ASC")
+      db.query("SELECT product.id, product.name, product.image, product.price, product.id_category, category.name AS category FROM public.product LEFT JOIN public.category ON category.id = product.id_category ORDER BY product.id DESC")
         .then((res) => {
           if (res.rows.length == 0) {
-            resolve('Data pada tabel Kosong!');
+            resolve('Product is empty!');
           } else {
             resolve(res.rows);
-          }
+          };
         })
         .catch((err) => {
           reject(err);
         });
     });
-  }
-  products.getSearch= (name) => {
+  };
+
+
+product.getSearch = (name) => {
+
     return new Promise((resolve, reject) => {
-      db.query( `SELECT product.id, product.name,  product.image, product.price, category.name AS category FROM public.product LEFT JOIN public.category ON category.id = product.id_category WHERE product.name ILIKE '%${name}%'`)
+      db.query(`SELECT product.id,
+                  product.name, 
+                  product.image,
+                  product.price, 
+                  product.id_category, 
+                  category.name AS category
+          FROM public.product 
+          LEFT JOIN public.category 
+          ON category.id = product.id_category
+          WHERE product.name
+            ILIKE '%${name}%'`)
         .then((res) => {
           if (res.rows.length == 0) {
-            resolve('Data di tabel Kosong!');
+            resolve('Data not found');
           } else {
             resolve(res.rows);
-          }
+          };
         })
         .catch((err) => {
           reject(err);
         });
     });
-  }
+  };
 
-  products.getSort= (order, sort) => {
+
+product.getSort= (order, sort) => {
     return new Promise((resolve, reject) => {
       db.query(
-        `SELECT product.id, product.name,  product.image, product.price, category.name AS category FROM public.product LEFT JOIN public.category ON category.id = product.id_category ORDER BY ${order} ${sort}`,
+        `SELECT product.id, product.name, product.image, product.price, product.image, category.name AS category FROM public.product LEFT JOIN public.category ON category.id = product.id_category ORDER BY ${order} ${sort}`,
       )
         .then((res) => {
           if (res.rows.length == 0) {
-            resolve('Data di tabel kosong!');
+            resolve('Data not found');
           } else {
             resolve(res.rows);
-          }
+          };
         })
         .catch((err) => {
-          reject(err);
+          reject('Data not sorted');
         });
     });
-  }
+  };
 
-  products.get= (id) => {
+
+product.get= (id) => {
     return new Promise((resolve, reject) => {
       db.query(
-        `SELECT product.id, product.name,  product.image, product.price, category.name AS category FROM public.product LEFT JOIN public.category ON category.id = product.id_category WHERE product.id=${id}`,
+        `SELECT product.id, product.name, product.image, product.price, category.name AS category FROM public.product LEFT JOIN public.category ON category.id = product.id_category WHERE product.id=${id}`,
       )
         .then((res) => {
           if (res.rows.length == 0) {
-            resolve('Data di tabel kosong!');
+            resolve('Data not found');
           } else {
             resolve(res.rows);
-          }
+          };
         })
         .catch((err) => {
           reject(err);
         });
     });
-  }
+  };
 
-products.addProd = (data, image) =>{
+
+product.add = (data, image) =>{
     return new Promise((resolve, reject) =>{
-        db.query(`INSERT INTO public.product(name, image, price, id_category) VALUES ('${data.name}', '${image}', ${data.price}, ${data.id_category})`)
+        db.query(`INSERT INTO public.product(name, price, image, id_category) VALUES ('${data.name}',  ${data.price}, '${image}', '${data.id_category}')`)
         .then((res) => {
             resolve(data)
         })
         .catch((err) => {
-            reject("Input data harus lengkap!")
-        })
-    })
-}
+            reject("Data not completed")
+        });
+    });
+};
 
-products.updateProd = (data, image) =>{
+product.update = (data, image) =>{
     return new Promise((resolve, reject) =>{
-        db.query(`UPDATE public.product SET name='${data.name}',  image='${image}', price=${data.price}, id_category='${data.id_category}' WHERE id=${data.id}`)
+        db.query(`UPDATE public.product SET name='${data.name}', image='${image}', price=${data.price}, id_category='${data.id_category}' WHERE id=${data.id}`)
         .then((res) => {
             resolve(data)
         })
         .catch((err) => {
-            reject(err)
-        })
-    })
-}
+            reject("Check Data")
+        });
+    });
+};
 
 
-products.delProd = (id) =>{
+product.del= (id) =>{
     return new Promise((resolve, reject) =>{
         db.query(`DELETE FROM public.product WHERE id=${id}`)
         .then((res) => {
-            resolve("Data Sukses dihapus!")
+            resolve(id)
         })
         .catch((err) => {
-            reject(err)
-        })
-    })
-}
+            reject("id not found")
+        });
+    });
+};
 
-module.exports = products
+
+
+module.exports = product;
 
 
 

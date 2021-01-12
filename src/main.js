@@ -5,8 +5,10 @@ const category = require("./Routes/category");
 const history = require("./Routes/history");
 const users = require("./Routes/users")
 const auth = require("./Routes/auth")
+const {cloudinaryConfig} = require ('./Config/cloudiNary')
 
 
+routes.use("*", cloudinaryConfig)
 routes.use("/product", product);
 routes.use("/category", category);
 routes.use("/history", history);

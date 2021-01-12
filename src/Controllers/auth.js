@@ -34,6 +34,7 @@ class Auth {
             const result = {
                 msg : "Token created",
                 token: token,
+                role: role,
             }
             return result
         } catch (error) {

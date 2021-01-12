@@ -1,74 +1,112 @@
-const products = {}
-const model = require('../Models/product')
-const respon = require('../Helpers/respon')
-const { redisdb } = require ('../Config/redis')
-const { response } = require('express')
-const logger = require('../../utils/logger')
+const product = {};
+const model = require('../Models/product');
+const respon = require('../Helpers/respon');
+const cloudUpload = require("../Helpers/cloudUpload")
+const {redisdb} = require('../Config/redis')
+const logger = require("../../utils/logger")
 
-products.getAll = async (req, res) => {
-    const { search } = req.query;
-    const { orderBy, sort } = req.query;
-    let result;
+
+product.getAll = async (req, res) => {
+    try {
+        const result = await model.getAll();
+        const saveRedis = JSON.stringify(result)
+        redisdb.setex("product", 60, saveRedis)
+        console.log("from postgreSQL")
+      logger.info("Get all Product by postgreSQL Success")
+      return respon(res, 200, result);
+    } catch (error) {
+      logger.error("Get all Product Failed")
+      return respon(res, 500, error);
+    };
+  };
+
+product.get = async (req, res) => {
+  const { search } = req.query;
+  const { orderBy, sort } = req.query;
+  let result;
     try {
       if (search) {
         result = await model.getSearch(search);
       } else if (orderBy) {
         result = await model.getSort(orderBy, sort);
       } else {
-        result = await model.getAll();
-        const saveRedis = JSON.stringify(result)
-        redisdb.setex("products", 60, saveRedis)
-        console.log("dari postgre");
+      result = await model.get(req.params.id);
       }
-      logger.info("getALL masuk")
+      logger.info("Get Product by id Success")
       return respon(res, 200, result);
     } catch (error) {
-      logger.warn("Error")
+      logger.error("Get Product by id Failed")
       return respon(res, 500, error);
-    }
-  }
+    };
+  };
 
-  products.get = async (req, res) => {
+
+product.getSort = async (req, res) => {
     try {
-      const result = await model.get(req.params.id);
-      return respon(res, 200, result);
+      const result = await model.getSort(req.query.orderBy, req.query.sort)
+      logger.info("Sort Product Success")
+      return respon(res, 200, result)
     } catch (error) {
-      return respon(res, 500, error);
+      logger.error("Sort Product Failed")
+      return respon(res, 500, error)
     }
-  }
+}
 
-products.add = async (req, res) => {
+product.getSearch = async (req, res) => {
+  try {
+    const result = await model.getSearch(req.query)
+    logger.info("Search Product Success")
+    return respon(res, 200, result)
+  } catch (error) {
+    logger.error("Search Product Failed")
+    return respon(res, 500, error)
+  }
+}
+
+product.add = async (req, res) => {
     try {
-      if (req.file === undefined){
-        return respon(res, 500, { msg: "Image harus diisi" })
+      if (req.file === undefined) {
+        return respon(res, 500, {msg: "Image harus diisi"})
       }
-        const result = await model.addProd(req.body, req.file.path)
-        return respon(res, 201, result)
+        const image_url = await cloudUpload(req.file.path)
+        const result = await model.add(req.body, image_url);
+        redisdb.del("product")
+        logger.info("Add Product Success")
+        return respon(res, 201, result);
     } catch (error){
-        return respon(res, 400, error)
-    }
+      logger.error("Add Product Failed")
+        return respon(res, 400, error);
+    };
     
-}
+};
 
-products.update = async (req, res) => {
+product.update = async (req, res) => {
     try {
-      if (req.file === undefined){
-        return respon(res, 500, { msg: "Image harus diisi" })
+      if (req.file === undefined) {
+        return respon(res, 500, {msg: "Image harus diisi"})
       }
-        const result = await model.updateProd(req.body, req.file.path)
-        return respon(res, 201, result)
+        const image_url = await cloudUpload(req.file.path)
+        const result = await model.update(req.body, image_url);
+        redisdb.del("product")
+        logger.info("Update Product Success")
+        return respon(res, 200, result);
     } catch (error){
-        return respon(res, 400, error)
-    }
-}
+      logger.error("Update Product Failed")
+        return respon(res, 400, error);
+    };
+};
 
-products.del = async (req, res) => {
+product.del = async (req, res) => {
    try {
-       const result = await model.delProd(req.params.id)
-        return respon(res, 200, result)
+       const result = await model.del(req.params.id);
+       logger.info("Delete Product by id Success")
+        return respon(res, 200, result);
    }catch (error) {
-        return res.send(res, 400, error)
-   }
-}
+        logger.error("Delete Product by id Failed")
+        return respon(res, 400, error);
+   };
+};
 
-module.exports = products
+
+ 
+module.exports = product;

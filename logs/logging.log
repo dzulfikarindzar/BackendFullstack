@@ -1945,3 +1945,63 @@
 [2021-01-12T15:45:35.213Z] info Get all Product by postgreSQL Success
 [2021-01-12T15:45:35.235Z] error Get Product by id Failed
 [2021-01-12T15:45:35.282Z] error Get Product by id Failed
+[2021-01-12T16:33:56.325Z] info Service running on port 9100
+[2021-01-12T16:33:56.359Z] info Connection to redis OK
+[2021-01-12T16:33:56.474Z] info Database Connect
+[2021-01-12T16:34:27.789Z] error Get Product by id Failed
+[2021-01-12T16:34:27.920Z] info Get all Product by postgreSQL Success
+[2021-01-12T16:34:27.934Z] error Get Product by id Failed
+[2021-01-12T16:34:31.963Z] info Get all Product by postgreSQL Success
+[2021-01-12T16:34:34.994Z] info Get all Product by postgreSQL Success
+[2021-01-12T16:34:35.012Z] error Get Product by id Failed
+[2021-01-12T16:34:35.135Z] error Get Product by id Failed
+[2021-01-12T16:34:38.512Z] info Get Product by id Success
+[2021-01-12T16:34:38.687Z] info Get Product by id Success
+[2021-01-12T16:34:38.749Z] info Get Product by id Success
+[2021-01-12T16:34:39.187Z] info Get Product by id Success
+[2021-01-12T16:34:39.194Z] info Get Product by id Success
+[2021-01-12T16:34:39.520Z] info Get Product by id Success
+[2021-01-12T16:34:39.525Z] info Get Product by id Success
+[2021-01-12T16:34:39.719Z] error Get Product by id Failed
+[2021-01-12T16:34:39.821Z] error Get Product by id Failed
+[2021-01-12T16:34:42.687Z] info Get all Product by postgreSQL Success
+[2021-01-12T16:34:42.713Z] error Get Product by id Failed
+[2021-01-12T16:34:42.718Z] error Get Product by id Failed
+[2021-01-17T19:50:17.552Z] info Service running on port 9100
+[2021-01-20T05:04:05.102Z] info Service running on port 9100
+[2021-01-20T05:04:05.150Z] info Connection to redis OK
+[2021-01-20T05:04:05.499Z] info Database Connect
+[2021-01-20T05:04:24.076Z] error Get Product by id Failed
+[2021-01-20T05:04:24.171Z] error Get Product by id Failed
+[2021-01-20T05:04:24.260Z] info Get all Product by postgreSQL Success
+[2021-01-20T05:04:29.433Z] info Get Product by id Success
+[2021-01-20T05:04:29.556Z] info Get Product by id Success
+[2021-01-20T05:04:29.674Z] info Get Product by id Success
+[2021-01-20T05:04:30.352Z] info Get Product by id Success
+[2021-01-20T05:04:30.358Z] info Get Product by id Success
+[2021-01-20T05:04:30.501Z] info Get Product by id Success
+[2021-01-20T05:04:30.507Z] info Get Product by id Success
+[2021-01-20T05:04:30.669Z] error Get Product by id Failed
+[2021-01-20T05:04:30.788Z] error Get Product by id Failed
+[2021-01-20T05:04:31.775Z] error Get Product by id Failed
+[2021-01-20T05:04:32.434Z] info Get all Product by postgreSQL Success
+[2021-01-20T05:04:32.454Z] error Get Product by id Failed
+[2021-01-20T05:04:32.501Z] error Get Product by id Failed
+[2021-01-20T05:04:34.506Z] info Get Product by id Success
+[2021-01-20T05:04:34.709Z] info Get Product by id Success
+[2021-01-20T05:04:34.719Z] info Get Product by id Success
+[2021-01-20T05:04:34.760Z] info Get Product by id Success
+[2021-01-20T05:04:36.772Z] info Get Product by id Success
+[2021-01-20T05:04:36.779Z] info Get Product by id Success
+[2021-01-20T05:04:36.958Z] info Get Product by id Success
+[2021-01-20T05:04:36.974Z] info Get Product by id Success
+[2021-01-20T05:04:37.090Z] info Get Product by id Success
+[2021-01-20T05:04:37.101Z] info Get Product by id Success
+[2021-01-20T05:04:37.281Z] error Get Product by id Failed
+[2021-01-20T05:04:37.396Z] error Get Product by id Failed
+[2021-01-20T05:04:37.511Z] error Get Product by id Failed
+[2021-01-20T05:04:37.624Z] error Get Product by id Failed
+[2021-01-20T05:04:45.698Z] error Get Product by id Failed
+[2021-01-20T05:04:45.854Z] info Get all Product by postgreSQL Success
+[2021-01-20T05:04:45.870Z] error Get Product by id Failed
+[2021-01-20T05:04:47.501Z] info Get all Product by postgreSQL Success

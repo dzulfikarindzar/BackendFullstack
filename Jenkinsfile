@@ -8,12 +8,12 @@ pipeline {
 
     parameters {
         booleanParam(name: 'RUNTEST', defaultValue: 'true', description: 'Checklist for RUNTEST')
-        choice(name: 'DEPLOY', choices: ['Yes', 'No'], description: 'Select for DEPLOY')
+        choice(name: 'DEPLOY', choices: ['Develop', 'Production'], description: 'Choice for DEPLOY')
     }
 
     stages {
 
-        stage('Instal Dependencies') {
+        stage('Install Dependencies') {
             steps {
                 nodejs("nodever14") {
                     sh 'npm install'
@@ -61,7 +61,7 @@ pipeline {
         stage('Deploy on develop') {
             when {
                 expression {
-                    params.DEPLOY == 'Yes'
+                    params.DEPLOY == 'Develop'
                 }
             }
             steps {

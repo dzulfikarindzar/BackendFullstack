@@ -61,7 +61,7 @@ services:
           - postgres
 
 networks: 
-    netnet:
+    netku:
         driver: bridge
 
 volumes: 

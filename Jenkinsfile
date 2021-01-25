@@ -59,6 +59,11 @@ pipeline {
         }
 
         stage('Deploy on develop') {
+            when {
+                expression {
+                    params.DEPLOY == 'Develop' || BRANCH_NAME == 'dev'
+                }
+            }
             steps {
                 script {
                     sshPublisher(
@@ -70,7 +75,7 @@ pipeline {
                                     sshTransfer(
                                         sourceFiles: 'docker-compose.yml',
                                         remoteDirectory: 'app',
-                                        execCommand: 'cd app && cd app  && docker-compose up -d',
+                                        execCommand: 'cd app && cd app && docker-compose stop && docker-compose up -d',
                                         execTimeout: 120000,
                                     )
                                 ]

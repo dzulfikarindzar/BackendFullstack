@@ -40,7 +40,7 @@ services:
         - ./redis-data:/data
 
   backend:
-      image: dzulfikarindzar/jenkins-backend:master
+      image: dzulfikarindzar/jenkins-backend
       ports: 
           - "8002:9100"
       environment: 

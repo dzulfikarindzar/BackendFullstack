@@ -7,6 +7,7 @@ pipeline {
     agent any
 
     parameters {
+        string(name: 'DOCKERHUB', defaultValue: 'Test Backend Jenkins', description: 'OIoioioioiio')
         booleanParam(name: 'RUNTEST', defaultValue: 'true', description: 'Checklist for RUNTEST')
         choice(name: 'DEPLOY', choices: ['Develop', 'Production'], description: 'Select for DEPLOY')
     }
@@ -61,7 +62,7 @@ pipeline {
         stage('Deploy on develop') {
             when {
                 expression {
-                    params.DEPLOY == 'Develop' || BRANCH_NAME == 'dev'
+                    params.DEPLOY == 'Develop'
                 }
             }
             steps {
@@ -75,7 +76,7 @@ pipeline {
                                     sshTransfer(
                                         sourceFiles: 'docker-compose.yml',
                                         remoteDirectory: 'app',
-                                        execCommand: 'cd app && cd app && docker-compose stop && docker-compose up -d',
+                                        execCommand: "docker pull ${dockerhub}:${BRANCH_NAME}; cd ./app/app; docker-compose stop; docker-compose up -d --force-recreate",
                                         execTimeout: 120000,
                                     )
                                 ]

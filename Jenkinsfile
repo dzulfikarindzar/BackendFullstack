@@ -7,6 +7,7 @@ pipeline {
     agent any
 
     parameters {
+        string(name: "Isi URL", defaultValue: "isikan url", description: 'URL gtihub')
         booleanParam(name: 'RUNTEST', defaultValue: 'true', description: 'Checklist for RUNTEST')
         choice(name: 'DEPLOY', choices: ['Yes', 'No'], description: 'Select for DEPLOY')
     }

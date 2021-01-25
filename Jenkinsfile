@@ -8,12 +8,12 @@ pipeline {
 
     parameters {
         booleanParam(name: 'RUNTEST', defaultValue: 'true', description: 'Checklist for RUNTEST')
-        choice(name: 'DEPLOY', choices: ['Develop', 'Production'], description: 'Choice for DEPLOY')
+        choice(name: 'DEPLOY', choices: ['Yes', 'No'], description: 'Select for DEPLOY')
     }
 
     stages {
 
-        stage('Install Dependencies') {
+        stage('Instal Dependencies') {
             steps {
                 nodejs("nodever14") {
                     sh 'npm install'
@@ -61,7 +61,7 @@ pipeline {
         stage('Deploy on develop') {
             when {
                 expression {
-                    params.DEPLOY == 'Develop'
+                    params.DEPLOY == 'Yes' 
                 }
             }
             steps {
@@ -75,7 +75,7 @@ pipeline {
                                     sshTransfer(
                                         sourceFiles: 'docker-compose.yml',
                                         remoteDirectory: 'app',
-                                        execCommand: "docker pull ${dockerhub}:${BRANCH_NAME}; cd ./app/app; docker-compose stop; docker-compose up -d --force-recreate",
+                                        execCommand: 'cd app && cd app && docker-compose stop && docker-compose up -d',
                                         execTimeout: 120000,
                                     )
                                 ]

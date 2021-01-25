@@ -59,11 +59,6 @@ pipeline {
         }
 
         stage('Deploy on develop') {
-            when {
-                expression {
-                    params.DEPLOY == 'Develop' || BRANCH_NAME == 'dev'
-                }
-            }
             steps {
                 script {
                     sshPublisher(

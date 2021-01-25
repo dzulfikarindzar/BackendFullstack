@@ -8,7 +8,7 @@ pipeline {
 
     parameters {
         booleanParam(name: 'RUNTEST', defaultValue: 'true', description: 'Checklist for RUNTEST')
-        choice(name: 'DEPLOY', choices: ['Yes', 'No'], description: 'Select for DEPLOY')
+        choice(name: 'DEPLOY', choices: ['Develop', 'Production'], description: 'Select for DEPLOY')
     }
 
     stages {
@@ -61,7 +61,7 @@ pipeline {
         stage('Deploy on develop') {
             when {
                 expression {
-                    params.DEPLOY == 'Yes' 
+                    params.DEPLOY == 'Develop' || BRANCH_NAME == 'dev'
                 }
             }
             steps {

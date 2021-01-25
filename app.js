@@ -14,8 +14,8 @@ server.use(cors())
 server.use(bodyPars.json())
 server.use(morgan("dev"))
 server.use("/public", express.static("public"))
-server.use(routes)
-
+server.use("/api", routes)
+//server.use(routes)
 
 db.connect()
     .then((res) => {

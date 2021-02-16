@@ -14,7 +14,7 @@ class Auth {
             
             const cek = await bcr.compare(passUser, passDB[0].password)
             if (cek) {
-                const result = await this.setToken(req.body.email, passDB[0].role)
+                const result = await this.setToken(req.body.email, passDB[0].name, passDB[0].role)
                 return respon (res, 200, result)
             } else {
                 return respon(res, 200, { msg : "Check Password Anda"})
@@ -24,16 +24,18 @@ class Auth {
         }
 
     }
-    setToken = async (email, role) => {
+    setToken = async (email, name, role) => {
         try {
             const payload = {
                 email : email,
+                name : name,
                 role : role
             }
             const token = jwt.sign(payload, process.env.JWT_KEYS, { expiresIn: '1d'} )
             const result = {
                 msg : "Token created",
                 token: token,
+                name: name,
                 role: role,
             }
             return result

@@ -4,7 +4,7 @@ services:
       container_name: Postgress
       image: postgres:latest
       ports: 
-        - "5432:5432"
+        - "5050:5432"
       volumes: 
         - ./pg-data:/var/lib/postgresql/data
       networks: 
@@ -14,18 +14,6 @@ services:
         - POSTGRES_PASSWORD=dzulfikar
         - POSTGRES_DB=product
 
-  pgadmin:
-     container_name: pgadmin
-     image: dpage/pgadmin4
-     ports:
-        - "6789:80"
-     environment:
-        PGADMIN_DEFAULT_EMAIL: admin@example.com
-        PGADMIN_DEFAULT_PASSWORD: root
-     restart: unless-stopped
-     networks:
-        - netku
-
   redis:
       container_name: redis
       image: redis:alpine3.12
@@ -33,7 +21,7 @@ services:
       environment: 
         - REDIS_PORT=6379
       ports:  
-        - "6379:6379"
+        - "9192:6379"
       networks: 
         - netku
       volumes: 
@@ -42,7 +30,7 @@ services:
   backend:
       image: dzulfikarindzar/jenkins-backend:master
       ports: 
-          - "8002:9100"
+          - "9191:9100"
       environment: 
           - DBUSER=dzul
           - DBPASSWORD=dzulfikar

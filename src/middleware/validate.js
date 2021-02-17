@@ -1,4 +1,4 @@
-const respon = require ('../Helpers/respon')
+const response = require('../Helpers/response')
 const jwt = require('jsonwebtoken')
 const logger = require('../../utils/logger')
 const { error } = require('winston')
@@ -12,30 +12,29 @@ const cekToken = (roles) => {
         const result = {
             msg : "Login first"
         }
-        logger.warn("Login dulu", result)
-        return respon(res, 401, result)
+        logger.error("Login First")
+        return response(res, 209, result)
     }
 
     jwt.verify(authtoken, process.env.JWT_KEYS, (err, decode)=> {
         if(err) {
-            logger.warn("Error", err)
-            return respon(res, 401, {msg : "Check Token!"})
-           
+            logger.error("Check token")
+            return response(res, 209, {msg : "Check Token!"})
         }
         roles.map((role) => {
             console.log(decode.role)
             if(role == decode.role) {
-                isAccess = true
+                isAccess = true;
             }
         })
             if(isAccess) {
                 next()
             } else {
-                return respon(res, 401, {msg: "you not premitted"})
+                logger.error("You not premitted")
+                return response(res, 209, {msg: "you not premitted"})
             }
        })
     }
 }
-
 
 module.exports = cekToken

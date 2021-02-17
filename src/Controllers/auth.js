@@ -1,48 +1,58 @@
 const bcr = require('bcrypt')
 const model = require('../Models/users')
-const respon = require('../Helpers/respon')
-const jwt = require ('jsonwebtoken') 
+const response = require('../Helpers/response');
+const jwt = require('jsonwebtoken');
+const logger = require('../../utils/logger');
 
 class Auth {
-    login = async (req, res) => {
-        try {
-            const passDB = await model.getByEmail(req.body.email)
-            const passUser = req.body.password
-            if (passDB <= 0) {
-                return response(res, 400, {msg: "email not registered"})
-            }
-            
-            const cek = await bcr.compare(passUser, passDB[0].password)
-            if (cek) {
-                const result = await this.setToken(req.body.email, passDB[0].name, passDB[0].role)
-                return respon (res, 200, result)
-            } else {
-                return respon(res, 200, { msg : "Check Password Anda"})
-            }
-        } catch (error) {
-            return respon(res, 500, error)
-        }
-
-    }
     setToken = async (email, name, role) => {
         try {
+
             const payload = {
-                email : email,
+                email: email,
                 name : name,
-                role : role
-            }
-            const token = jwt.sign(payload, process.env.JWT_KEYS, { expiresIn: '1d'} )
-            const result = {
-                msg : "Token created",
-                token: token,
-                name: name,
                 role: role,
             }
+
+            const token = jwt.sign(payload, process.env.JWT_KEYS, { expiresIn : "3h" })
+
+            const result = {
+                msg : "Token created",
+                token : token,
+                name: name,
+                role : role,
+            }
+            logger.info("Created Token Success")
             return result
+
         } catch (error) {
             throw error
         }
+    }
+    login = async (req, res) =>{
+        try {
+        const userDB = await model.getByEmail(req.body.email)
+        const passUser = req.body.password
+            
+         if (userDB.length <= 0) {
+            logger.error("Email not registered")
+            return response(res, 200, {msg: "Username not registered"})
+        }
+        
+        const check = await bcr.compare(passUser, userDB[0].password)
 
+        if (check) { 
+            const result = await this.setToken(req.body.email, userDB[0].name, userDB[0].role)
+            return response(res, 200, result)
+        } 
+            logger.error("Check Password")
+            return response(res, 200, {msg: "Check Password"})
+
+        } catch (error) {
+            logger.error(error)
+            return response(res, 500, error)
+
+        }
     }
 }
 

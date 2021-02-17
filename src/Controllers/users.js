@@ -1,6 +1,6 @@
 const users = {}
 const model = require('../Models/users')
-const respon = require('../Helpers/respon')
+const respon = require('../Helpers/response')
 const hashPassword = require('../Helpers/hash')
 
 users.get = async (req, res) => {
@@ -15,8 +15,15 @@ users.get = async (req, res) => {
 }
 
 users.add = async (req, res) => {
+    console.log("masuk");
     try {
+        const checkUser = await model.getByName(req.body.name)
         const checkEmail = await model.getByEmail (req.body.email)
+        if(checkUser.length > 0) {
+            logger.error("Username has been registered")
+            return response(res, 209, {msg: "username has been registered"})
+        }
+
     if (checkEmail.length > 0){
         return respon (res, 401, {msg : "email has been registered"})
     }

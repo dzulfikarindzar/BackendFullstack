@@ -2604,3 +2604,97 @@
 [2021-02-15T04:29:20.731Z] info Get all Product by postgreSQL Success
 [2021-02-15T04:29:20.763Z] error Get Product by id Failed
 [2021-02-15T04:29:20.777Z] error Get Product by id Failed
+[2021-02-16T16:06:24.114Z] info Service running on port 9100
+[2021-02-16T16:06:24.169Z] info Connection to redis OK
+[2021-02-16T16:06:24.280Z] info Database Connect
+[2021-02-16T16:07:58.133Z] info Created Token Success
+[2021-02-16T16:08:52.081Z] info Get all Product by postgreSQL Success
+[2021-02-16T16:12:58.891Z] error Check URL
+[2021-02-16T16:13:53.538Z] error Check URL
+[2021-02-16T16:13:59.992Z] error Check URL
+[2021-02-16T16:24:02.844Z] error Email not registered
+[2021-02-16T16:24:05.775Z] error Email not registered
+[2021-02-16T16:24:11.898Z] info Created Token Success
+[2021-02-16T16:27:18.378Z] info Created Token Success
+[2021-02-16T16:27:45.531Z] info Created Token Success
+[2021-02-16T16:27:45.546Z] info Created Token Success
+[2021-02-16T16:27:45.563Z] info Created Token Success
+[2021-02-16T16:27:45.584Z] info Created Token Success
+[2021-02-16T16:27:45.735Z] error Check Password
+[2021-02-16T16:27:45.770Z] error Check Password
+[2021-02-16T16:27:45.816Z] error Check Password
+[2021-02-16T16:27:45.830Z] error Check Password
+[2021-02-16T16:27:45.936Z] info Created Token Success
+[2021-02-16T16:27:45.973Z] info Created Token Success
+[2021-02-16T16:28:24.718Z] info Created Token Success
+[2021-02-16T16:31:40.097Z] info Service running on port 9100
+[2021-02-16T16:31:40.148Z] info Connection to redis OK
+[2021-02-16T16:31:40.463Z] info Database Connect
+[2021-02-16T16:37:18.894Z] info Service running on port 9100
+[2021-02-16T16:37:18.927Z] info Connection to redis OK
+[2021-02-16T16:37:19.122Z] info Database Connect
+[2021-02-16T16:37:50.525Z] info Service running on port 9100
+[2021-02-16T16:37:50.555Z] info Connection to redis OK
+[2021-02-16T16:37:50.796Z] info Database Connect
+[2021-02-16T16:37:54.914Z] info Service running on port 9100
+[2021-02-16T16:37:55.010Z] info Connection to redis OK
+[2021-02-16T16:37:55.258Z] info Database Connect
+[2021-02-16T16:38:38.186Z] info Service running on port 9100
+[2021-02-16T16:38:38.225Z] info Connection to redis OK
+[2021-02-16T16:38:38.423Z] info Database Connect
+[2021-02-16T16:39:19.319Z] info Service running on port 9100
+[2021-02-16T16:39:19.460Z] info Connection to redis OK
+[2021-02-16T16:39:19.716Z] info Database Connect
+[2021-02-16T16:39:38.542Z] info Created Token Success
+[2021-02-16T17:17:42.696Z] info Created Token Success
+[2021-02-16T17:43:48.389Z] info Created Token Success
+[2021-02-16T18:10:44.334Z] info Created Token Success
+[2021-02-16T18:10:47.813Z] info Get all Product by postgreSQL Success
+[2021-02-16T18:10:56.365Z] info Get all Product by postgreSQL Success
+[2021-02-16T18:11:42.483Z] info Update Product Success
+[2021-02-16T18:11:44.207Z] info Get all Product by postgreSQL Success
+[2021-02-17T02:12:39.658Z] info Service running on port 9100
+[2021-02-17T02:12:39.753Z] info Connection to redis OK
+[2021-02-17T02:12:40.316Z] info Database Connect
+[2021-02-17T02:14:36.348Z] info Created Token Success
+[2021-02-17T02:14:36.357Z] info Created Token Success
+[2021-02-17T02:17:44.261Z] error Check token
+[2021-02-17T02:17:57.965Z] info Created Token Success
+[2021-02-17T05:03:25.241Z] info Created Token Success
+[2021-02-17T05:03:26.889Z] error Check URL
+[2021-02-17T05:03:26.897Z] error Check URL
+[2021-02-17T05:03:26.910Z] info Get all Product by postgreSQL Success
+[2021-02-17T05:03:42.990Z] error Check URL
+[2021-02-17T05:03:42.995Z] error Check URL
+[2021-02-17T05:03:43.004Z] info Get all Product by postgreSQL Success
+[2021-02-17T05:06:30.117Z] info Created Token Success
+[2021-02-17T05:06:31.596Z] error Check URL
+[2021-02-17T05:06:31.601Z] error Check URL
+[2021-02-17T05:06:31.615Z] info Get all Product by postgreSQL Success
+[2021-02-17T05:07:43.642Z] info Created Token Success
+[2021-02-17T05:07:46.379Z] error Check URL
+[2021-02-17T05:07:46.384Z] error Check URL
+[2021-02-17T05:07:46.395Z] info Get all Product by postgreSQL Success
+[2021-02-17T05:09:04.830Z] info Get all Product by postgreSQL Success
+[2021-02-17T05:09:06.444Z] info Get all Product by postgreSQL Success
+[2021-02-17T05:09:06.452Z] error Check URL
+[2021-02-17T05:09:06.457Z] error Check URL
+[2021-02-17T05:09:09.627Z] error Check URL
+[2021-02-17T05:09:09.630Z] error Check URL
+[2021-02-17T05:09:09.637Z] info Get all Product by postgreSQL Success
+[2021-02-17T05:09:11.665Z] error Check URL
+[2021-02-17T05:09:11.669Z] error Check URL
+[2021-02-17T05:09:11.676Z] info Get all Product by postgreSQL Success
+[2021-02-17T05:09:25.511Z] error Check URL
+[2021-02-17T05:09:25.516Z] error Check URL
+[2021-02-17T05:09:25.640Z] info Get all Product by postgreSQL Success
+[2021-02-17T05:16:10.425Z] info Created Token Success
+[2021-02-17T05:16:11.920Z] error Check URL
+[2021-02-17T05:16:11.927Z] error Check URL
+[2021-02-17T05:16:11.933Z] info Get all Product by postgreSQL Success
+[2021-02-17T05:18:09.919Z] error Check URL
+[2021-02-17T05:18:09.925Z] error Check URL
+[2021-02-17T05:18:10.085Z] info Get all Product by postgreSQL Success
+[2021-02-17T05:18:20.213Z] error Check URL
+[2021-02-17T05:18:20.221Z] error Check URL
+[2021-02-17T05:18:20.225Z] info Get all Product by postgreSQL Success

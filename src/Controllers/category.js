@@ -1,6 +1,6 @@
 const categories = {}
 const model = require('../Models/category')
-const respon = require('../Helpers/respon')
+const respon = require('../Helpers/response')
 
 categories.get = async (req, res) => {
     try{

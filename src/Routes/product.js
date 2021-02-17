@@ -5,14 +5,9 @@ const validate = require ("../middleware/validate")
 const upload = require ("../middleware/multer")
 const cache = require("../middleware/cache")
 
-routes.get('/'
-,validate(["developer","users"])
-,cache,ctrl.getAll);
-routes.get('/:id',ctrl.get);
-routes.get('/search',ctrl.getSearch);
-routes.get('/sort',ctrl.getSort);
-routes.post("/",upload.single("image"), ctrl.add);
-routes.put("/", upload.single("image"), ctrl.update);
-routes.delete("/:id", ctrl.del);
+routes.get('/',validate(["developer","users"]),cache,ctrl.getAll);
+routes.post("/",validate(["developer"]),upload.single("image"),ctrl.add);
+routes.put("/",validate(["developer"]),upload.single("image"),ctrl.update);
+routes.delete("/:id",validate(["developer"]),ctrl.del);
 
 module.exports = routes;

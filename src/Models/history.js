@@ -1,4 +1,4 @@
-const db = require('../Config/db');
+const db = require('../Configs/db');
 const history = {};
 
 history.get= () => {
@@ -26,18 +26,6 @@ history.get= () => {
         })
         .catch((err) => {
             reject("Data not completed")
-        });
-    });
-};
-
-history.update = (data) =>{
-    return new Promise((resolve, reject) =>{
-        db.query(`UPDATE public.history SET cashier='${data.cashier}', orders='${data.orders}', amount=${data.amount}, users='${data.users}', invoices='${data.invoices}' WHERE id=${data.id}`)
-        .then((res) => {
-            resolve(data)
-        })
-        .catch((err) => {
-            reject("Input data lengkap!")
         });
     });
 };

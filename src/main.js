@@ -1,19 +1,26 @@
 const express = require("express");
 const routes = express.Router();
 const product = require("./Routes/product");
+const sorted = require("./Routes/sorted")
 const category = require("./Routes/category");
 const history = require("./Routes/history");
-const users = require("./Routes/users")
+const users = require("./Routes/users");
 const auth = require("./Routes/auth")
-const {cloudinaryConfig} = require ('./Config/cloudiNary')
-
+const { cloudinaryConfig } = require("./Configs/cloudInary")
+const logger = require("../utils/logger")
 
 routes.use("*", cloudinaryConfig)
+routes.use("/sorted", sorted)
 routes.use("/product", product);
 routes.use("/category", category);
 routes.use("/history", history);
 routes.use("/users", users);
 routes.use("/auth", auth);
+
+routes.use("*", (req, res)=> {
+    logger.error("Check URL")
+    res.send("Data Tidak Ditemukan")  
+})
 
 module.exports = routes;
 

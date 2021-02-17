@@ -1,7 +1,7 @@
-const response = require('../Helpers/respon')
-const respon = require('../Helpers/respon')
-const redis = require('../Config/redis')
-const { redisdb } = require("../Config/redis")
+const response = require('../Helpers/response')
+const respon = require('../Helpers/response')
+const redis = require('../Configs/redis')
+const { redisdb } = require("../Configs/redis")
 
 const getAll = (req, res, next) => {
     redisdb.get("products", (err, data) =>{

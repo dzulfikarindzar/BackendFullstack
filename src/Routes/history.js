@@ -6,7 +6,6 @@ const ctrl = require("../Controllers/history");
 
 routes.get('/',validate(["developer","users"]),ctrl.get);
 routes.post("/",validate(["developer","users"]),ctrl.add);
-routes.put("/", ctrl.update);
 routes.delete("/:id",validate(["developer","users"]),ctrl.del);
 
 module.exports = routes;

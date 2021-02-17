@@ -1,4 +1,4 @@
-const { uploader } = require("../Config/cloudiNary")
+const { uploader } = require("../Configs/cloudiNary")
 
 async function uploads(filePath) {
     try {

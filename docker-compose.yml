@@ -33,7 +33,7 @@ services:
           - "9191-9192:9100"
       environment: 
           - DBUSER=admin
-          - DBPASSWORD=1234abcd
+          - DBPASSWORD=abcd1234
           - DBNAME=product
           - DBHOST=3.83.153.65
           - DBPORT=5432

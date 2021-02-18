@@ -1,7 +1,7 @@
 version: "3.7"
 services: 
   postgres:
-      container_name: Postgress-graph
+      container_name: postgress-graph
       image: postgres:latest
       ports: 
         - "5432:5432"
@@ -15,7 +15,7 @@ services:
         - POSTGRES_DB=product
 
   redis:
-      container_name: redis-graph
+      container_name: Redis-graph
       image: redis:alpine3.12
       command: redis-server
       environment: 

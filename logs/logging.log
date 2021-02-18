@@ -2798,3 +2798,8 @@
 [2021-02-18T00:36:41.709Z] info Created Token Success
 [2021-02-18T00:37:32.831Z] info Created Token Success
 [2021-02-18T00:40:15.501Z] info Created Token Success
+[2021-02-18T02:21:12.130Z] info Service running on port 9100
+[2021-02-18T02:21:12.157Z] info Connection to redis OK
+[2021-02-18T02:21:12.933Z] info Database Connect
+[2021-02-18T02:21:21.592Z] info Created Token Success
+[2021-02-18T02:22:35.513Z] info Created Token Success

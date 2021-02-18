@@ -4,7 +4,7 @@ services:
       container_name: postgress-graph
       image: postgres:latest
       ports: 
-        - "5432:5432"
+        - "5555:5432"
       volumes: 
         - ./pg-data:/var/lib/postgresql/data
       networks: 

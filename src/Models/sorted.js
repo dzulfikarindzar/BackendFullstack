@@ -23,7 +23,7 @@ sorted.get = (query, data) => new Promise((resolve, reject) => {
     .then((res) => {
       if (res.rows.length === 0) {
         resolve({
-          id: 1, name: 'Product is Empty', image: '', price: '0', category: 0,
+          id: 1, name: 'Data tidak ditemukan', image: '', price: '0', category: 0,
         });
       } else {
         resolve(res.rows);

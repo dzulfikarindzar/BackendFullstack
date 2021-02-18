@@ -4,7 +4,7 @@ const product = {};
 
 product.getAll= () => {
     return new Promise((resolve, reject) => {
-      db.query('SELECT * FROM public.product ORDER BY id DESC')
+      db.query('SELECT * FROM public.product ORDER BY id ASC')
         .then((res) => {
           if (res.rows.length == 0) {
             resolve({msg :'Product is empty!'});

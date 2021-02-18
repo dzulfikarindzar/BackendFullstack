@@ -2698,3 +2698,95 @@
 [2021-02-17T05:18:20.213Z] error Check URL
 [2021-02-17T05:18:20.221Z] error Check URL
 [2021-02-17T05:18:20.225Z] info Get all Product by postgreSQL Success
+[2021-02-17T06:14:51.884Z] info Service running on port 9100
+[2021-02-17T06:14:51.907Z] info Connection to redis OK
+[2021-02-17T06:14:52.042Z] info Database Connect
+[2021-02-17T06:16:02.872Z] info Service running on port 9100
+[2021-02-17T06:16:02.904Z] info Connection to redis OK
+[2021-02-17T06:16:03.654Z] info Database Connect
+[2021-02-17T06:18:30.296Z] info Service running on port 9100
+[2021-02-17T06:18:30.308Z] info Connection to redis OK
+[2021-02-17T06:18:31.115Z] info Database Connect
+[2021-02-17T06:20:54.802Z] info Service running on port 9100
+[2021-02-17T06:20:54.820Z] info Connection to redis OK
+[2021-02-17T06:20:54.944Z] info Database Connect
+[2021-02-17T06:21:39.812Z] info Created Token Success
+[2021-02-17T06:22:09.757Z] info Service running on port 9100
+[2021-02-17T06:22:09.768Z] info Connection to redis OK
+[2021-02-17T06:22:10.622Z] info Database Connect
+[2021-02-17T06:22:20.408Z] info Created Token Success
+[2021-02-17T06:23:06.158Z] info Service running on port 9100
+[2021-02-17T06:23:06.169Z] info Connection to redis OK
+[2021-02-17T06:23:06.957Z] info Database Connect
+[2021-02-17T06:23:30.528Z] info Created Token Success
+[2021-02-17T06:25:32.203Z] info Created Token Success
+[2021-02-17T06:25:34.271Z] error Check URL
+[2021-02-17T06:25:34.278Z] error Check URL
+[2021-02-17T06:25:34.549Z] info Get all Product by postgreSQL Success
+[2021-02-17T06:27:34.375Z] info Created Token Success
+[2021-02-17T06:27:35.479Z] error Check URL
+[2021-02-17T06:27:35.486Z] error Check URL
+[2021-02-17T06:27:35.718Z] info Get all Product by postgreSQL Success
+[2021-02-17T06:30:11.311Z] info Created Token Success
+[2021-02-17T06:30:12.525Z] error Check URL
+[2021-02-17T06:30:12.532Z] error Check URL
+[2021-02-17T06:30:12.803Z] info Get all Product by postgreSQL Success
+[2021-02-17T06:30:51.485Z] info Created Token Success
+[2021-02-17T06:30:53.870Z] error Check URL
+[2021-02-17T06:30:53.876Z] error Check URL
+[2021-02-17T06:30:54.140Z] info Get all Product by postgreSQL Success
+[2021-02-17T06:36:06.810Z] info Service running on port 9100
+[2021-02-17T06:36:06.821Z] info Connection to redis OK
+[2021-02-17T06:36:07.612Z] info Database Connect
+[2021-02-17T06:37:17.782Z] error Check Password
+[2021-02-17T06:37:23.763Z] info Created Token Success
+[2021-02-17T06:37:25.064Z] error Check URL
+[2021-02-17T06:37:25.069Z] error Check URL
+[2021-02-17T06:37:25.339Z] info Get all Product by postgreSQL Success
+[2021-02-17T06:40:26.996Z] info Service running on port 9100
+[2021-02-17T06:40:27.007Z] info Connection to redis OK
+[2021-02-17T06:40:27.792Z] info Database Connect
+[2021-02-17T06:40:46.017Z] info Created Token Success
+[2021-02-17T23:31:28.443Z] info Service running on port 9100
+[2021-02-17T23:31:28.516Z] info Connection to redis OK
+[2021-02-17T23:31:29.231Z] info Database Connect
+[2021-02-17T23:32:38.108Z] info Created Token Success
+[2021-02-18T00:06:00.504Z] info Get all Product by postgreSQL Success
+[2021-02-18T00:15:05.203Z] info Service running on port 9100
+[2021-02-18T00:15:05.216Z] info Connection to redis OK
+[2021-02-18T00:15:06.017Z] info Database Connect
+[2021-02-18T00:15:20.592Z] info Service running on port 9100
+[2021-02-18T00:15:20.605Z] info Connection to redis OK
+[2021-02-18T00:15:21.443Z] info Database Connect
+[2021-02-18T00:15:41.138Z] info Service running on port 9100
+[2021-02-18T00:15:41.153Z] info Connection to redis OK
+[2021-02-18T00:15:41.943Z] info Database Connect
+[2021-02-18T00:19:08.730Z] info Service running on port 9100
+[2021-02-18T00:19:08.744Z] info Connection to redis OK
+[2021-02-18T00:19:09.529Z] info Database Connect
+[2021-02-18T00:19:38.138Z] info Service running on port 9100
+[2021-02-18T00:19:38.151Z] info Connection to redis OK
+[2021-02-18T00:19:38.913Z] info Database Connect
+[2021-02-18T00:19:55.353Z] info Service running on port 9100
+[2021-02-18T00:19:55.368Z] info Connection to redis OK
+[2021-02-18T00:19:56.142Z] info Database Connect
+[2021-02-18T00:20:57.749Z] info Service running on port 9100
+[2021-02-18T00:20:57.764Z] info Connection to redis OK
+[2021-02-18T00:20:58.549Z] info Database Connect
+[2021-02-18T00:21:03.538Z] info Service running on port 9100
+[2021-02-18T00:21:03.556Z] info Connection to redis OK
+[2021-02-18T00:21:04.318Z] info Database Connect
+[2021-02-18T00:21:30.471Z] info Service running on port 9100
+[2021-02-18T00:21:30.490Z] info Connection to redis OK
+[2021-02-18T00:21:31.315Z] info Database Connect
+[2021-02-18T00:21:50.829Z] info Service running on port 9100
+[2021-02-18T00:21:50.844Z] info Connection to redis OK
+[2021-02-18T00:21:51.641Z] info Database Connect
+[2021-02-18T00:22:21.822Z] info Service running on port 9100
+[2021-02-18T00:22:21.840Z] info Connection to redis OK
+[2021-02-18T00:22:22.660Z] info Database Connect
+[2021-02-18T00:22:29.714Z] info Service running on port 9100
+[2021-02-18T00:22:29.727Z] info Connection to redis OK
+[2021-02-18T00:22:31.731Z] info Service running on port 9100
+[2021-02-18T00:22:31.757Z] info Connection to redis OK
+[2021-02-18T00:22:32.525Z] info Database Connect
